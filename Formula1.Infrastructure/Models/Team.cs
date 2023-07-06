@@ -19,9 +19,13 @@ namespace Formula1.Infrastructure.Models
         [Required]
         public string FullName { get; set; }
 
-        /// <summary>Gets or sets the base.</summary>
-        /// <value>The base.</value>
-        public string Base { get; set; }
+        /// <summary>Gets or sets the base city.</summary>
+        /// <value>The base city.</value>
+        public string BaseCity { get; set; }
+
+        /// <summary>Gets or sets the base country.</summary>
+        /// <value>The base country.</value>
+        public string BaseCountry { get; set; }
 
         /// <summary>Gets or sets the race entered.</summary>
         /// <value>The race entered.</value>
