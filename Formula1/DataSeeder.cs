@@ -400,167 +400,464 @@ namespace Formula1
                 CreatedTime = DateTime.UtcNow
             });
 
+            var haasTeam = context.Teams.FirstOrDefault(t => t.Name == "Haas");
+
             context.Drivers.Add(new Driver
             {
-                Name = "Sir Lewis Hamilton",
-                DateOfBirth = new DateOnly(1985, 1, 7),
-                Nationality = "British",
-                RaceStarts = 319,
-                RaceWins = 103,
-                PodiumFinishes = 194,
-                PolePositions = 103,
-                FastestLaps = 62,
-                ChampionshipWins = 7,
-                CareerPoints = 4511.5,
-                CurrentTeam = new Team
-                {
-                    Name = "Mercedes",
-                    FullName = "Mercedes-AMG Petronas F1 Team",
-                    BaseCity = "Brackle and Brixworth",
-                    BaseCountry = "England, UK",
-                    RaceEntered = 280,
-                    RaceWins = 125,
-                    Podiums = 285,
-                    PolePositions = 136,
-                    ConstructorChampionships = 8,
-                    Website = "https://www.mercedesamgf1.com/",
-                    CurrentChassis = "F1 W14",
-                    CurrentEngineProvider = new EngineProvider
-                    {
-                        Name = "Mercedes AMG High Performance Powertrains",
-                        CreatedTime = DateTime.UtcNow,
-                    },
-                    CurrentTeamPrincipal = new TeamPrincipal
-                    {
-                        Name = "Toto Wolff",
-                        CreatedTime = DateTime.UtcNow
-                    },
-                    CreatedTime = DateTime.UtcNow
-                },
-                FirstRace = "Australian Grand Prix 2007",
+                Name = "Kevin Magnussen",
+                DateOfBirth = new DateOnly(1992, 10, 5),
+                Nationality = "Danish",
+                RaceStarts = 150,
+                PodiumFinishes = 1,
+                PolePositions = 1,
+                FastestLaps = 2,
+                CareerPoints = 185,
+                CurrentTeam = haasTeam,
+                FirstRace = "Australian Grand Prix 2014",
                 CreatedTime = DateTime.UtcNow
             });
 
             context.Drivers.Add(new Driver
             {
-                Name = "Sir Lewis Hamilton",
-                DateOfBirth = new DateOnly(1985, 1, 7),
+                Name = "Jolyon Palmer",
+                DateOfBirth = new DateOnly(1991, 1, 20),
                 Nationality = "British",
-                RaceStarts = 319,
-                RaceWins = 103,
-                PodiumFinishes = 194,
-                PolePositions = 103,
-                FastestLaps = 62,
-                ChampionshipWins = 7,
-                CareerPoints = 4511.5,
-                CurrentTeam = new Team
-                {
-                    Name = "Mercedes",
-                    FullName = "Mercedes-AMG Petronas F1 Team",
-                    BaseCity = "Brackle and Brixworth",
-                    BaseCountry = "England, UK",
-                    RaceEntered = 280,
-                    RaceWins = 125,
-                    Podiums = 285,
-                    PolePositions = 136,
-                    ConstructorChampionships = 8,
-                    Website = "https://www.mercedesamgf1.com/",
-                    CurrentChassis = "F1 W14",
-                    CurrentEngineProvider = new EngineProvider
-                    {
-                        Name = "Mercedes AMG High Performance Powertrains",
-                        CreatedTime = DateTime.UtcNow,
-                    },
-                    CurrentTeamPrincipal = new TeamPrincipal
-                    {
-                        Name = "Toto Wolff",
-                        CreatedTime = DateTime.UtcNow
-                    },
-                    CreatedTime = DateTime.UtcNow
-                },
-                FirstRace = "Australian Grand Prix 2007",
+                RaceStarts = 35,
+                CareerPoints = 9,
+                FirstRace = "Australian Grand Prix 2016",
+                LastRace = "Japanese Grand Prix 2017",
                 CreatedTime = DateTime.UtcNow
             });
 
             context.Drivers.Add(new Driver
             {
-                Name = "Sir Lewis Hamilton",
-                DateOfBirth = new DateOnly(1985, 1, 7),
-                Nationality = "British",
-                RaceStarts = 319,
-                RaceWins = 103,
-                PodiumFinishes = 194,
-                PolePositions = 103,
-                FastestLaps = 62,
-                ChampionshipWins = 7,
-                CareerPoints = 4511.5,
-                CurrentTeam = new Team
-                {
-                    Name = "Mercedes",
-                    FullName = "Mercedes-AMG Petronas F1 Team",
-                    BaseCity = "Brackle and Brixworth",
-                    BaseCountry = "England, UK",
-                    RaceEntered = 280,
-                    RaceWins = 125,
-                    Podiums = 285,
-                    PolePositions = 136,
-                    ConstructorChampionships = 8,
-                    Website = "https://www.mercedesamgf1.com/",
-                    CurrentChassis = "F1 W14",
-                    CurrentEngineProvider = new EngineProvider
-                    {
-                        Name = "Mercedes AMG High Performance Powertrains",
-                        CreatedTime = DateTime.UtcNow,
-                    },
-                    CurrentTeamPrincipal = new TeamPrincipal
-                    {
-                        Name = "Toto Wolff",
-                        CreatedTime = DateTime.UtcNow
-                    },
-                    CreatedTime = DateTime.UtcNow
-                },
-                FirstRace = "Australian Grand Prix 2007",
+                Name = "Marcus Ericsson",
+                DateOfBirth = new DateOnly(1990, 9, 2),
+                Nationality = "Swedish",
+                RaceStarts = 97,
+                CareerPoints = 18,
+                FirstRace = "Australian Grand Prix 2014",
+                LastRace = "Abu Dhabi Grand Prix 2018",
                 CreatedTime = DateTime.UtcNow
             });
 
             context.Drivers.Add(new Driver
             {
-                Name = "Sir Lewis Hamilton",
-                DateOfBirth = new DateOnly(1985, 1, 7),
-                Nationality = "British",
-                RaceStarts = 319,
-                RaceWins = 103,
-                PodiumFinishes = 194,
-                PolePositions = 103,
-                FastestLaps = 62,
-                ChampionshipWins = 7,
-                CareerPoints = 4511.5,
+                Name = "Felipe Nasr",
+                DateOfBirth = new DateOnly(1992, 8, 21),
+                Nationality = "Brazilian",
+                RaceStarts = 39,
+                CareerPoints = 29,
+                FirstRace = "Australian Grand Prix 2015",
+                LastRace = "Abu Dhabi Grand Prix 2016",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            var ferrariEngine = context.EngineProviders.FirstOrDefault(p => p.Name == "Ferrari");
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Carlos Sainz Jr.",
+                DateOfBirth = new DateOnly(1994, 9, 1),
+                Nationality = "Spanish",
+                RaceStarts = 171,
+                RaceWins = 1,
+                PodiumFinishes = 15,
+                PolePositions = 3,
+                FastestLaps = 3,
+                CareerPoints = 864.5,
                 CurrentTeam = new Team
                 {
-                    Name = "Mercedes",
-                    FullName = "Mercedes-AMG Petronas F1 Team",
-                    BaseCity = "Brackle and Brixworth",
-                    BaseCountry = "England, UK",
-                    RaceEntered = 280,
-                    RaceWins = 125,
-                    Podiums = 285,
-                    PolePositions = 136,
-                    ConstructorChampionships = 8,
-                    Website = "https://www.mercedesamgf1.com/",
-                    CurrentChassis = "F1 W14",
-                    CurrentEngineProvider = new EngineProvider
-                    {
-                        Name = "Mercedes AMG High Performance Powertrains",
-                        CreatedTime = DateTime.UtcNow,
-                    },
+                    Name = "Ferrari",
+                    FullName = "Scuderia Ferrari",
+                    BaseCity = "Maranello",
+                    BaseCountry = "Italy",
+                    RaceEntered = 1064,
+                    RaceWins = 241,
+                    Podiums = 795,
+                    PolePositions = 243,
+                    ConstructorChampionships = 16,
+                    Website = "https://www.ferrari.com/formula1",
+                    CurrentChassis = "SF-23",
+                    CurrentEngineProvider = ferrariEngine,
                     CurrentTeamPrincipal = new TeamPrincipal
                     {
-                        Name = "Toto Wolff",
+                        Name = "Frédéric Vasseur",
                         CreatedTime = DateTime.UtcNow
                     },
                     CreatedTime = DateTime.UtcNow
                 },
-                FirstRace = "Australian Grand Prix 2007",
+                FirstRace = "Australian Grand Prix 2015",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Felipe Massa",
+                DateOfBirth = new DateOnly(1981, 4, 25),
+                Nationality = "Brazilian",
+                RaceStarts = 269,
+                RaceWins = 11,
+                PodiumFinishes = 41,
+                PolePositions = 16,
+                FastestLaps = 15,
+                CareerPoints = 1167,
+                FirstRace = "Australian Grand Prix 2002",
+                LastRace = "Abu Dhabi Grand Prix 2017",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Valtteri Bottas",
+                DateOfBirth = new DateOnly(1989, 8, 28),
+                Nationality = "Finnish",
+                RaceStarts = 209,
+                RaceWins = 10,
+                PodiumFinishes = 67,
+                PolePositions = 20,
+                FastestLaps = 19,
+                CareerPoints = 1792,
+                CurrentTeam = new Team
+                {
+                    Name = "Alfa Romeo",
+                    FullName = "Alfa Romeo F1 Team Stake",
+                    BaseCity = "Hinwil, Zürich",
+                    BaseCountry = "Switzerland",
+                    RaceEntered = 202,
+                    RaceWins = 10,
+                    Podiums = 26,
+                    PolePositions = 12,
+                    Website = "https://www.sauber-group.com/motorsport/formula-1/",
+                    CurrentChassis = "C43",
+                    CurrentEngineProvider = ferrariEngine,
+                    CurrentTeamPrincipal = new TeamPrincipal
+                    {
+                        Name = "Alessandro Alunni Bravi",
+                        CreatedTime = DateTime.UtcNow
+                    },
+                    CreatedTime = DateTime.UtcNow
+                },
+                FirstRace = "Australian Grand Prix 2013",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Antonio Giovinazzi",
+                DateOfBirth = new DateOnly(1993, 12, 14),
+                Nationality = "Italian",
+                RaceStarts = 62,
+                CareerPoints = 21,
+                FirstRace = "Australian Grand Prix 2017",
+                LastRace = "Abu Dhabi Grand Prix 2021",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            var alpineTeam = context.Teams.FirstOrDefault(t => t.Name == "Alpine");
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Pierre Gasly",
+                DateOfBirth = new DateOnly(1996, 2, 7),
+                Nationality = "French",
+                RaceStarts = 117,
+                RaceWins = 1,
+                PodiumFinishes = 3,
+                FastestLaps = 3,
+                CareerPoints = 348,
+                CurrentTeam = alpineTeam,
+                FirstRace = "Malaysian Grand Prix 2017",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Brendon Hartley",
+                DateOfBirth = new DateOnly(1989, 11, 10),
+                Nationality = "New Zealander",
+                RaceStarts = 25,
+                CareerPoints = 4,
+                FirstRace = "United States Grand Prix 2017",
+                LastRace = "Abu Dhabi Grand Prix 2018",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Paul di Resta",
+                DateOfBirth = new DateOnly(1986, 4, 16),
+                Nationality = "British",
+                RaceStarts = 59,
+                CareerPoints = 21,
+                FirstRace = "Australian Grand Prix 2011",
+                LastRace = "Hungarian Grand Prix 2017",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            var astonMartinTeam = context.Teams.FirstOrDefault(t => t.Name == "Aston Martin");
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Lance Stroll",
+                DateOfBirth = new DateOnly(1998, 10, 29),
+                Nationality = "Canadian",
+                RaceStarts = 131,
+                PodiumFinishes = 3,
+                PolePositions = 1,
+                CareerPoints = 238,
+                CurrentTeam = astonMartinTeam,
+                FirstRace = "Australian Grand Prix 2017",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            var ferrariTeam = context.Teams.FirstOrDefault(t => t.Name == "Ferrari");
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Charles Leclerc",
+                DateOfBirth = new DateOnly(1997, 10, 16),
+                Nationality = "Monégasque",
+                RaceStarts = 111,
+                RaceWins = 5,
+                PodiumFinishes = 26,
+                PolePositions = 19,
+                CareerPoints = 940,
+                FastestLaps = 7,
+                CurrentTeam = ferrariTeam,
+                FirstRace = "Australian Grand Prix 2018",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Sergey Sirotkin",
+                DateOfBirth = new DateOnly(1995, 8, 27),
+                Nationality = "Russian",
+                RaceStarts = 21,
+                CareerPoints = 1,
+                FirstRace = "Australian Grand Prix 2018",
+                LastRace = "Abu Dhabi Grand Prix 2018",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Lando Norris",
+                DateOfBirth = new DateOnly(1999, 11, 13),
+                Nationality = "British",
+                RaceStarts = 91,
+                PodiumFinishes = 6,
+                PolePositions = 1,
+                FastestLaps = 5,
+                CareerPoints = 452,
+                CurrentTeam = new Team
+                {
+                    Name = "McLaren",
+                    FullName = "McLaren F1 Team",
+                    BaseCity = "Woking, Surrey",
+                    BaseCountry = "England, UK",
+                    RaceEntered = 938,
+                    RaceWins = 183,
+                    Podiums = 494,
+                    PolePositions = 156,
+                    ConstructorChampionships = 8,
+                    Website = "https://www.mclaren.com/racing/",
+                    CurrentChassis = "MCL60",
+                    CurrentEngineProvider = mercedesEngine,
+                    CurrentTeamPrincipal = new TeamPrincipal
+                    {
+                        Name = "Zak Brown",
+                        CreatedTime = DateTime.UtcNow
+                    },
+                    CreatedTime = DateTime.UtcNow
+                },
+                FirstRace = "Australian Grand Prix 2019",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Alex Albon",
+                DateOfBirth = new DateOnly(1996, 3, 26),
+                Nationality = "Thai",
+                RaceStarts = 68,
+                PodiumFinishes = 2,
+                CareerPoints = 208,
+                CurrentTeam = new Team
+                {
+                    Name = "Williams",
+                    FullName = "Williams Racing",
+                    BaseCity = "Grove, Oxfordshire",
+                    BaseCountry = "England, UK",
+                    RaceEntered = 802,
+                    RaceWins = 114,
+                    Podiums = 313,
+                    PolePositions = 128,
+                    ConstructorChampionships = 9,
+                    Website = "https://www.williamsf1.com/",
+                    CurrentChassis = "FW45",
+                    CurrentEngineProvider = mercedesEngine,
+                    CurrentTeamPrincipal = new TeamPrincipal
+                    {
+                        Name = "James Vowels",
+                        CreatedTime = DateTime.UtcNow
+                    },
+                    CreatedTime = DateTime.UtcNow
+                },
+                FirstRace = "Australian Grand Prix 2019",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            var mercedesTeam = context.Teams.FirstOrDefault(t => t.Name == "Mercedes");
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "George Russell",
+                DateOfBirth = new DateOnly(1998, 2, 15),
+                Nationality = "British",
+                RaceStarts = 91,
+                RaceWins = 1,
+                PodiumFinishes = 10,
+                PolePositions = 1,
+                FastestLaps = 6,
+                CareerPoints = 366,
+                CurrentTeam = mercedesTeam,
+                FirstRace = "Australian Grand Prix 2019",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Robert Kubica",
+                DateOfBirth = new DateOnly(1984, 12, 7),
+                Nationality = "Polish",
+                RaceStarts = 99,
+                RaceWins = 1,
+                PodiumFinishes = 12,
+                PolePositions = 1,
+                FastestLaps = 1,
+                CareerPoints = 274,
+                FirstRace = "Hungarian Grand Prix 2006",
+                LastRace = "Italian Grand Prix 2021",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Pietro Fittipaldi",
+                DateOfBirth = new DateOnly(1996, 16, 25),
+                Nationality = "Brazilian-American",
+                RaceStarts = 2,
+                FirstRace = "Sakhir Grand Prix 2020",
+                LastRace = "Abu Dhabi Grand Prix 2020",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Nicholas Latifi",
+                DateOfBirth = new DateOnly(1995, 6, 29),
+                Nationality = "Canadian",
+                RaceStarts = 61,
+                CareerPoints = 9,
+                FirstRace = "Austrian Grand Prix 2020",
+                LastRace = "Abu Dhabi Grand Prix 2022",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Jack Aitken",
+                DateOfBirth = new DateOnly(1995, 9, 23),
+                Nationality = "British",
+                RaceStarts = 1,
+                FirstRace = "Sakhir Grand Prix 2020",
+                LastRace = "Sakhir Grand Prix 2020",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            var redBullEngine = context.EngineProviders.FirstOrDefault(p => p.Name == "Red Bull Powertrains");
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Yuki Tsunoda",
+                DateOfBirth = new DateOnly(2000, 5, 11),
+                Nationality = "Janapnese",
+                RaceStarts = 51,
+                CareerPoints = 46,
+                CurrentTeam = new Team
+                {
+                    Name = "AlphaTauri",
+                    FullName = "Scuderia AlphaTauri",
+                    BaseCity = "Faenza",
+                    BaseCountry = "Italy",
+                    RaceEntered = 71,
+                    RaceWins = 1,
+                    Podiums = 2,
+                    Website = "https://scuderia.alphatauri.com/",
+                    CurrentChassis = "AT 04",
+                    CurrentEngineProvider = redBullEngine,
+                    CurrentTeamPrincipal = new TeamPrincipal
+                    {
+                        Name = "Franz Tost",
+                        CreatedTime = DateTime.UtcNow
+                    },
+                    CreatedTime = DateTime.UtcNow
+                },
+                FirstRace = "Bahrain Grand Prix 2021",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Nikita Mazepin",
+                DateOfBirth = new DateOnly(1999, 3, 2),
+                Nationality = "Russian",
+                RaceStarts = 21,
+                FirstRace = "Bahrain Grand Prix 2021",
+                LastRace = "Abu Dhabi Grand Prix 2021",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Mick Schumacher",
+                DateOfBirth = new DateOnly(1999, 3, 22),
+                Nationality = "German",
+                RaceStarts = 43,
+                CareerPoints = 12,
+                FirstRace = "Bahrain Grand Prix 2021",
+                LastRace = "Abu Dhabi Grand Prix 2022",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            var alpaRomeoTeam = context.Teams.FirstOrDefault(t => t.Name == "Alfa Romeo");
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Zhou Guanyu",
+                DateOfBirth = new DateOnly(1999, 5, 30),
+                Nationality = "Chinese",
+                RaceStarts = 31,
+                CareerPoints = 10,
+                FastestLaps = 2,
+                CurrentTeam = alpaRomeoTeam,
+                FirstRace = "Bahrain Grand Prix 2022",
+                CreatedTime = DateTime.UtcNow
+            });
+
+            var alphaTauriTeam = context.Teams.FirstOrDefault(t => t.Name == "AlphaTauri");
+
+            context.Drivers.Add(new Driver
+            {
+                Name = "Nyck de Vries",
+                DateOfBirth = new DateOnly(1995, 2, 6),
+                Nationality = "Dutch",
+                RaceStarts = 10,
+                CareerPoints = 2,
+                CurrentTeam = alphaTauriTeam,
+                FirstRace = "Italian Grand Prix 2022",
                 CreatedTime = DateTime.UtcNow
             });
         }
