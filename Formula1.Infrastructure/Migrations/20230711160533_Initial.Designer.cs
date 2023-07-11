@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Formula1.Infrastructure.Migrations
 {
     [DbContext(typeof(F1DataContext))]
-    [Migration("20230706204455_sunnypatel2048-patch-3-update2")]
-    partial class sunnypatel2048patch3update2
+    [Migration("20230711160533_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -50,7 +50,8 @@ namespace Formula1.Infrastructure.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     FullName = table.Column<string>(type: "text", nullable: false),
-                    Base = table.Column<string>(type: "text", nullable: false),
+                    BaseCity = table.Column<string>(type: "text", nullable: false),
+                    BaseCountry = table.Column<string>(type: "text", nullable: false),
                     RaceEntered = table.Column<int>(type: "integer", nullable: false),
                     RaceWins = table.Column<int>(type: "integer", nullable: false),
                     Podiums = table.Column<int>(type: "integer", nullable: false),
@@ -85,7 +86,7 @@ namespace Formula1.Infrastructure.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    DateOfBirth = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DateOfBirth = table.Column<DateOnly>(type: "date", nullable: false),
                     Nationality = table.Column<string>(type: "text", nullable: false),
                     RaceStarts = table.Column<int>(type: "integer", nullable: false),
                     RaceWins = table.Column<int>(type: "integer", nullable: false),
