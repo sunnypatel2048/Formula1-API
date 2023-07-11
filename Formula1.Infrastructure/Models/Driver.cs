@@ -17,7 +17,7 @@ namespace Formula1.Infrastructure.Models
         /// <summary>Gets or sets the date of birth.</summary>
         /// <value>The date of birth.</value>
         [Required]
-        public DateTime DateOfBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
 
         /// <summary>Gets or sets the nationality.</summary>
         /// <value>The nationality.</value>

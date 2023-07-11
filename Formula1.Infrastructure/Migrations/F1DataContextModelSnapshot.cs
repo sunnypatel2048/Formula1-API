@@ -42,8 +42,8 @@ namespace Formula1.Infrastructure.Migrations
                     b.Property<int?>("CurrentTeamId")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<DateOnly>("DateOfBirth")
+                        .HasColumnType("date");
 
                     b.Property<int>("FastestLaps")
                         .HasColumnType("integer");
@@ -116,7 +116,11 @@ namespace Formula1.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Base")
+                    b.Property<string>("BaseCity")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("BaseCountry")
                         .IsRequired()
                         .HasColumnType("text");
 
