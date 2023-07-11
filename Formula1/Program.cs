@@ -1,3 +1,4 @@
+using Formula1;
 using Formula1.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,5 +26,7 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Seed();
 
 app.Run();
