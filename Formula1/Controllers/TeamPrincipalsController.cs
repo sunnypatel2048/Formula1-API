@@ -44,5 +44,54 @@ namespace Formula1.Controllers
 
             return Ok(teamPrincipal);
         }
+
+        /// <summary>Adds the team principal.</summary>
+        /// <param name="request"></param>
+        [HttpPost]
+        public async Task<IActionResult> AddTeamPrincipal(TeamPrincipal request)
+        {
+            request.CreatedTime = DateTime.UtcNow;
+
+            _context.TeamPrincipals.Add(request);
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+
+        /// <summary>Updates the team principal.</summary>
+        /// <param name="request">The request.</param>
+        [HttpPut]
+        public async Task<IActionResult> UpdateTeamPrincipal(TeamPrincipal request)
+        {
+            var teamPrincipal = await _context.TeamPrincipals.FindAsync(request.Id);
+
+            if (teamPrincipal == null)
+            {
+                return BadRequest("Team Principal not found.");
+            }
+
+            teamPrincipal.Name = request.Name;
+            teamPrincipal.ModifiedTime = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+
+        /// <summary>Deletes the team principal by specified identifier.</summary>
+        /// <param name="id">The identifier.</param>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var teamPrincipal = await _context.TeamPrincipals.FindAsync(id);
+
+            if (teamPrincipal == null)
+            {
+                return BadRequest("Team Principal not found");
+            }
+
+            _context.TeamPrincipals.Remove(teamPrincipal);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }
