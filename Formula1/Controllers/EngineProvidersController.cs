@@ -44,5 +44,53 @@ namespace Formula1.Controllers
 
             return Ok(engineProvider);
         }
+
+        /// <summary>Adds the engine provider.</summary>
+        /// <param name="request"></param>
+        [HttpPost]
+        public async Task AddEngineProvider(EngineProvider request)
+        {
+            request.CreatedTime = DateTime.UtcNow;
+
+            _context.EngineProviders.Add(request);
+            await _context.SaveChangesAsync();
+        }
+
+        /// <summary>Updates the team principal.</summary>
+        /// <param name="request">The request.</param>
+        [HttpPut]
+        public async Task<IActionResult> UpdateEngineProvider(EngineProvider request)
+        {
+            var engineProvider = await _context.EngineProviders.FindAsync(request.Id);
+
+            if (engineProvider == null)
+            {
+                return BadRequest("Engine Provider not found.");
+            }
+
+            engineProvider.Name = request.Name;
+            engineProvider.ModifiedTime = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+
+        /// <summary>Deletes the engine provider by specified identifier.</summary>
+        /// <param name="id">The identifier.</param>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var engineProvider = await _context.EngineProviders.FindAsync(id);
+
+            if (engineProvider == null)
+            {
+                return BadRequest("Engine Provider not found");
+            }
+
+            _context.EngineProviders.Remove(engineProvider);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }
